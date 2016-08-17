@@ -4,10 +4,13 @@ An adaption from the great React-Router tutorials.
 
 # To run
 
-[*] npm install
+* npm install
+
 
 # To run
 
-[*] NODE_ENV=production npm start
+* NODE_ENV=production npm start
+
 OR
-[*] npm start
+
+* npm start
