@@ -11,11 +11,7 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
-app.set('view engine', 'ejs')
-
-var ejs = require('ejs');
-ejs.open = '{{';
-ejs.close = '}}';
+app.set('view engine')
 
 MongoClient.connect('mongodb://***:***@***.mlab.com:***/gigst-db', (err, database) => {
   if (err) return console.log(err)
@@ -37,7 +33,7 @@ app.post('/actionhtmlref', (req, res) => {
 app.get('/', (req, res) => {
   db.collection('db_area').find().toArray((err, result) => {
     if (err) return console.log(err)
-    // renders index.ejs
-    res.render('index.ejs', {db_areas: result})
+    // renders index.ejs.
+    res.render('modules/About.js', {db_areas: result})
   })
 })
